@@ -1,14 +1,23 @@
 'use strict';
 
+const Glue = require('glue');
 const Hapi = require('hapi');
+const manifest = require('./config/manifest.json');
 
-const server = new Hapi.Server();
-server.connection({ port: 3000 });
-
-server.start((err) => {
-
-    if (err) {
-        throw err;
+if (!process.env.PRODUCTION) {
+  manifest.registrations.push({
+    "plugin": {
+      "register": "blipp",
+      "options": {}
     }
-    console.log('Server running at:', server.info.uri);
+  });
+}
+
+Glue.compose(manifest, { relativeTo: __dirname }, (err, server) => {
+  if (err) {
+    console.log('server.register err:', err);
+  }
+  server.start(() => {
+    console.log('✅  Server is listening on ' + server.info.uri.toLowerCase());
+  });
 });
