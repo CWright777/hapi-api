@@ -18,7 +18,7 @@ module.exports = {
     {
       plugin: {
         register: "hapi-bookshelf-models",
-        options: require("./db")
+        options: { knex: require("../db/knexfile.js") }
       }
     }
   ]
