@@ -1,4 +1,3 @@
-
 module.exports = {
   adapters:{
      postgresql: 'sails-postgresql'

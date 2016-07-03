@@ -15,20 +15,22 @@ module.exports = {
     {
       plugin: {
         register: "dogwater",
-        options: require("../config/db")
+        options: require("./db")
+      }
+    },
+    {
+      plugin: {
+        register: 'bedwetter',
+        options: {}
+      }
+    }, {
+      plugin: {
+        register: "hapi-routes",
+        options: {
+          dir: "api/routes"
+        }
       }
     }
-    //{
-      //plugin: {
-        //register: "hapi-bookshelf-models",
-        //options: { knex: require("../db/knexfile.js") }
-      //}
-    //},{
-      //plugin: {
-        //register: 'bedwetter',
-        //options: {} 
-      //}
-    //}
   ]
 };
 //{
