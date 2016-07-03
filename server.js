@@ -1,8 +1,10 @@
 'use strict';
 
+require("dotenv").config();
+
 const Glue = require('glue');
 const Hapi = require('hapi');
-const manifest = require('./config/manifest.json');
+const manifest = require('./config/manifest.js');
 
 if (!process.env.PRODUCTION) {
   manifest.registrations.push({
