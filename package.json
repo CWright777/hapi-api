@@ -11,6 +11,7 @@
   "dependencies": {
     "blipp": "^2.3.0",
     "bookshelf": "^0.10.0",
+    "dogwater": "^2.0.0",
     "dotenv": "^2.0.0",
     "glue": "^3.3.0",
     "good": "^7.0.1",
@@ -18,6 +19,10 @@
     "hapi": "^13.4.1",
     "hapi-bookshelf-models": "^2.0.0",
     "knex": "^0.11.7",
-    "pg": "^6.0.1"
+    "path": "^0.12.7",
+    "pg": "^6.0.1",
+    "sails-postgresql": "^0.11.4",
+    "shortid": "^2.2.6",
+    "waterline": "^0.12.2"
   }
 }

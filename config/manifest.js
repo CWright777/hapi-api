@@ -12,15 +12,23 @@ module.exports = {
     }
   ],
   registrations: [
-    //{
-      //plugin: "hapi-config"
-    //},
     {
       plugin: {
-        register: "hapi-bookshelf-models",
-        options: { knex: require("../db/knexfile.js") }
+        register: "dogwater",
+        options: require("../config/db")
       }
     }
+    //{
+      //plugin: {
+        //register: "hapi-bookshelf-models",
+        //options: { knex: require("../db/knexfile.js") }
+      //}
+    //},{
+      //plugin: {
+        //register: 'bedwetter',
+        //options: {} 
+      //}
+    //}
   ]
 };
 //{

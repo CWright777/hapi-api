@@ -5,6 +5,7 @@ require("dotenv").config();
 const Glue = require('glue');
 const Hapi = require('hapi');
 const manifest = require('./config/manifest.js');
+const pgresDisk = require('sails-postgresql')
 
 if (!process.env.PRODUCTION) {
   manifest.registrations.push({
