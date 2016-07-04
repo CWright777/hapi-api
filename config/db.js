@@ -14,5 +14,8 @@ module.exports = {
         ssl: false
     }
   },
-  models: [require("../api/models/user.js")]
+  models: [
+    require("../api/models/user.js"),
+    require("../api/models/message.js")
+  ]
 }

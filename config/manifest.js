@@ -13,6 +13,9 @@ module.exports = {
   ],
   registrations: [
     {
+      plugin: "blipp"
+    },
+    {
       plugin: {
         register: "dogwater",
         options: require("./db")

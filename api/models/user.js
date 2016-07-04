@@ -24,6 +24,17 @@ module.exports = {
     last_name: {
       type : 'string',
       required : true
+    },
+    received_messages: {
+      collection: 'received_messages',
+      via: 'receiverId',
+      model: 'message'
+
+    },
+    sent_messages: {
+      collection: 'sent_messages',
+      via: 'senderId',
+      model: 'message'
     }
   }
 }
