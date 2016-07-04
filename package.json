@@ -26,5 +26,10 @@
     "sails-postgresql": "^0.11.4",
     "shortid": "^2.2.6",
     "waterline": "^0.12.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.0.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-react": "^5.2.2"
   }
 }

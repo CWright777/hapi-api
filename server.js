@@ -1,9 +1,6 @@
-'use strict';
-
-require("dotenv").config();
+require('dotenv').config();
 
 const Glue = require('glue');
-const Hapi = require('hapi');
 const manifest = require('./config/manifest.js');
 
 Glue.compose(manifest, { relativeTo: __dirname }, (err, server) => {
@@ -12,6 +9,6 @@ Glue.compose(manifest, { relativeTo: __dirname }, (err, server) => {
   }
 
   server.start(() => {
-    console.log('✅  Server is listening on ' + server.info.uri.toLowerCase());
+    console.log(`✅  Server is listening on ${server.info.uri.toLowerCase()}`);
   });
 });

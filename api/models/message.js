@@ -1,5 +1,3 @@
-const shortid = require('shortid');
-
 module.exports = {
   identity: 'message',
   connection: 'postgresql',
@@ -7,28 +5,28 @@ module.exports = {
     id: {
       type: 'string',
       primaryKey: true,
-      unique: true
+      unique: true,
     },
     title: {
       type: 'string',
-      required: true
+      required: true,
     },
     text: {
       type: 'string',
-      required: true
+      required: true,
     },
     receiverId: {
       type: 'string',
       required: true,
-      model: 'user'
+      model: 'user',
     },
     senderId: {
       type: 'string',
       required: true,
-      model: 'user'
+      model: 'user',
     },
     migrate: 'safe',
     autoCreatedAt: true,
-    autoUpdatedAt: true
-  }
-}
+    autoUpdatedAt: true,
+  },
+};

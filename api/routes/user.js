@@ -1,4 +1,4 @@
-var bedwetterOptions = {}
+const bedwetterOptions = {};
 
 exports.routes = (server) => {
   server.route([
@@ -8,45 +8,45 @@ exports.routes = (server) => {
       method: 'GET',
       config: {
         handler: {
-          bedwetter: bedwetterOptions
-        }
-      }
+          bedwetter: bedwetterOptions,
+        },
+      },
     }, {
       // return a specific user by id
       path: '/user/{id}',
       method: 'GET',
       config: {
         handler: {
-          bedwetter: bedwetterOptions
-        }
-      }
+          bedwetter: bedwetterOptions,
+        },
+      },
     }, {
       // create a new user
       path: '/user',
       method: 'POST',
       config: {
         handler: {
-          bedwetter: bedwetterOptions
-        }
-      }
+          bedwetter: bedwetterOptions,
+        },
+      },
     }, {
       // udpate an existing user by id
       path: '/user/{id}',
       method: ['PATCH', 'POST'],
       config: {
         handler: {
-          bedwetter: bedwetterOptions
-        }
-      }
+          bedwetter: bedwetterOptions,
+        },
+      },
     }, {
       // remove a user by id
       path: '/user/{id}',
       method: 'DELETE',
       config: {
         handler: {
-          bedwetter: bedwetterOptions
-        }
-      }
-    }
-  ])
+          bedwetter: bedwetterOptions,
+        },
+      },
+    },
+  ]);
 };
